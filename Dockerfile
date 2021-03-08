@@ -2,6 +2,8 @@ FROM zulhilmizainuddin/jenkins-agent-nodejs
 USER root
 
 RUN sudo apt-get update -y 
+RUN sudo apt-get install -y build-essential
+RUN sudo apt-get update -y 
 RUN sudo apt upgrade -y
 RUN sudo apt install -y apt-transport-https ca-certificates curl software-properties-common gnupg2
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
